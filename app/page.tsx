@@ -37,8 +37,11 @@ export default function Home() {
           <section className="mb-12 animate-slideIn">
             <h2 className="text-3xl font-bold mb-4">Bring Your Research to Life</h2>
             <p className="mb-6">Transform complex findings into clear, compelling visual narratives that captivate your audience.</p>
-            <Button className="bg-[#2c3e50] text-[#f9f3e6] px-6 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(44,62,80,1)] transition-all duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(44,62,80,1)] hover:bg-[#34495e]">
-              Begin Your Project
+            <Button
+              className="bg-[#2c3e50] text-[#f9f3e6] px-6 py-3 font-bold shadow-[4px_4px_0px_0px_rgba(44,62,80,1)] transition-all duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(44,62,80,1)] hover:bg-[#34495e]"
+              asChild
+            >
+              <Link href="/generate">Begin Your Project</Link>
             </Button>
           </section>
 
