@@ -22,9 +22,9 @@ export default function Home() {
           </h1>
           <nav>
             <ul className="flex space-x-6">
-              {['Features', 'Pricing', 'Contact'].map((item, index) => (
+              {['Pricing', 'Contact'].map((item, index) => (
                 <li key={item} className="animate-fadeIn" style={{ animationDelay: `${index * 200}ms` }}>
-                  <Link href={`#${item.toLowerCase()}`} className="underline hover:text-[#d35400] transition-colors duration-300">
+                  <Link href={`/${item.toLowerCase()}`} className="underline hover:text-[#d35400] transition-colors duration-300">
                     {item}
                   </Link>
                 </li>
@@ -43,12 +43,12 @@ export default function Home() {
           </section>
 
           <section id="features" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6">Tools That Empower Your Presentation</h3>
+            <h3 className="text-2xl font-bold mb-6">Useful Tools for Your Presentation</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { title: "Content Extraction", description: "Automatically identify and extract key points from your research papers." },
-                { title: "Layout Templates", description: "Choose from a variety of pre-designed, customizable presentation layouts." },
-                { title: "Citation Manager", description: "Organize and format your references according to various academic styles." }
+                { title: "Key Point Finder", description: "Helps you spot and pull out important ideas from your research papers." },
+                { title: "Slide Designs", description: "Pick from ready-made slide layouts you can adjust to fit your needs." },
+                { title: "Reference Helper", description: "Keeps your sources organized and properly formatted for academic writing." }
               ].map((feature, index) => (
                 <Card key={index} className="border-2 border-[#2c3e50] shadow-[4px_4px_0px_0px_rgba(44,62,80,1)] transition-all duration-300 ease-in-out hover:translate-x-1 hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(44,62,80,1)] bg-[#f9f3e6] animate-fadeIn" style={{ animationDelay: `${index * 200}ms` }}>
                   <CardHeader>
