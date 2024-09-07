@@ -9,8 +9,16 @@ const shipporiMincho = Shippori_Mincho({
 });
 
 export const metadata: Metadata = {
-  title: "Gakunn",
-  description: "Transform Your Research Presentations",
+  title: "Gakunn | Academic Presentation Generator",
+  description: "Efficiently create academic presentations from arXiv papers using AI-powered tools. Streamline your research communication process.",
+  keywords: ["academic presentations", "arXiv", "research communication", "AI-powered tools"],
+  authors: [{ name: "Gakunn Team" }],
+  openGraph: {
+    title: "Gakunn | Academic Presentation Generator",
+    description: "Create academic presentations from arXiv papers using AI-powered tools.",
+    url: "https://gakunn.vercel.app",
+    siteName: "Gakunn"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
