@@ -30,6 +30,11 @@ export default function GeneratePresentationPage() {
   const [showFullAbstract, setShowFullAbstract] = useState(false);
   const router = useRouter();
 
+  const isValidArxivLink = (link: string): boolean => {
+    const arxivRegex = /^(?:https?:\/\/(?:www\.)?arxiv\.org\/(?:abs|pdf)\/)?(?:\d{4}\.\d{4,5}|\d{7})(?:v\d+)?$/i;
+    return arxivRegex.test(link);
+  };
+
   const normalizeArxivLink = (link: string): string => {
     const arxivRegex = /(?:arxiv\.org\/(?:abs|pdf)\/)?(\d+\.\d+)/i;
     const match = link.match(arxivRegex);
@@ -47,6 +52,12 @@ export default function GeneratePresentationPage() {
     setError('');
     setMetadata(null);
     setPresentation(null);
+
+    if (!isValidArxivLink(arxivLink)) {
+      setError('Not a valid arXiv link or ID');
+      setIsLoading(false);
+      return;
+    }
 
     const normalizedLink = normalizeArxivLink(arxivLink);
 
